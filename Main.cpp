@@ -2,14 +2,19 @@
 
 int main(){
 
-    int apples; // initilization
-    apples = 4; //declarization
-    int bannanas = 5; // initilization + declarization
+    int var1;
+    int var2;
+    int answer;
 
+    std::cout << "what is the first number: ";
+    std::cin >> var1;
+    std::cout << "what is the second number: ";
+    std::cin >> var2;
+    
+    answer = var1 + var2;
 
-    int fruit = apples + bannanas;
+    std::cout << var1 << " + " << var2 << " = " << answer << "\n";
 
-    std::cout << "fruit in basket = " << fruit << "\n";
 
     return 1;
 }
