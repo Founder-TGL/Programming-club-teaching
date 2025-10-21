@@ -1,26 +1,24 @@
 #include <iostream>
 
-void  calculator(int varA, int varB);
-
+using namespace std;
+int add();
 int main(){
-    int var1;
-    int var2;
-    int answer;
-
-    while(true){
-        calculator(var1, var2);
-    }
-
+    int counter;
+    counter = add();
     return 1;
 }
 
-void  calculator(int varA, int varB){
-    std::cout << "what is the first number: ";
-    std::cin >> varA;
-    std::cout << "what is the second number: ";
-    std::cin >> varB;
+int add(){
+    int counter = 0, addNum;
 
-    int answer = varA + varB;
+    // == equals / != not equals / > greater than / < less than / >= greater and equal
     
-    std::cout << varA << " + " << varB << " = " << answer << "\n";
+
+    while(addNum != 0){
+        cout << "input number to add to counter (0 to quit): " << endl;
+        cin >> addNum;
+        counter += addNum;      
+    }
+    
+    return counter;
 }
