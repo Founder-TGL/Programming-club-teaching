@@ -1,24 +1,60 @@
 #include <iostream>
+#include <string>
 
 using namespace std;
-int add();
+
+class people{
+    private: 
+        string name;
+        int age;
+        string occupation;
+        string branch;
+    public: 
+        people(){
+            name = "That one Speed kid";
+            age = 1000;
+            occupation = "my mom is kinda homeless";
+            branch = "outreach";
+    
+        }
+        people(string name, int age, string occupation){
+            this->name = name;
+            this->age = age;
+            this->occupation = occupation;
+        }
+        int getAge() {
+            return age;
+        }
+        void setAge(int age) {
+            this->age = age;
+        }
+        string getName(){
+            return name;
+        }
+        void setName(string name){
+            this->name = name;
+        }
+        string getOccupation(){
+            return occupation;
+        }
+        void setOccupation(string occupation){
+            this->occupation = occupation;
+        }
+
+
+};
+
+
+
 int main(){
-    int counter;
-    counter = add();
-    return 1;
-}
 
-int add(){
-    int counter = 0, addNum;
+    people danna = people("Danna", 15, "Student");
+    people Alejandra = people("Alejandra", 16, "student");
+    people Muratalla = people("Muratalla", 33, "counselor");
+    people Ashton = people("Ashton", 62, "Homeless");
+    people paul = people("paul", 17, "pinar");
 
-    // == equals / != not equals / > greater than / < less than / >= greater and equal
-    
+    danna.setAge(16);
 
-    while(addNum != 0){
-        cout << "input number to add to counter (0 to quit): " << endl;
-        cin >> addNum;
-        counter += addNum;      
-    }
-    
-    return counter;
+    cout << "Age: " << danna.getAge() << endl;
 }
